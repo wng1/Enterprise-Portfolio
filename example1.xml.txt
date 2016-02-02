@@ -1,0 +1,8 @@
+
+<customerlist>
+ <customer category="INDIVIDUAL">
+    <title>Mr</title>
+    <firstName>John</firstName>
+    <lastName>Smith</lastName>
+    </customer>  
+</customerlist>

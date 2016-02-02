@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+//V.1
+
+<html><body>
+<script>
+
+function loadXMLDoc(dname)
+{
+if (window.XMLHttpRequest)
+{
+ xtest=new XMLHttpRequest();
+}
+else
+{
+ xtest=new ActiveXObject("Microsoft.XMLHTTP");
+}
+xtest.open("GET",dname,false);
+
+try 
+{
+xtest.responseType="msxml-document"
+}
+catch
+(e)
+{
+
+}
+xtest.send("");
+return xtest;
+}
+
+function useHttpResponse()
+
+if (http.readyState == 4)
+{
+   if(http.status == 200)
+  {
+      var result=nodes.iterateNext();
+      var testing = getXMLValueByPath('/customertype/title/firstname)',xml, nsResolver, XPathResult.ANY_TYPE, null);
+      alert(testing)
+  }
+}
+
+function getXMLValueByPath()
+{
+while (result)
+  {
+  document.write(result.childNodes[0].nodeValue);
+  document.write("<br>");
+  result=nodes.iterateNext();
+  }
+}
+
+}
+
+
+</script>
+</body></html>
