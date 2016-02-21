@@ -2,7 +2,7 @@ import java.io.*;
 import java.sql.*;   //sql.Driver, sql.Connection
 import java util.*;
 import javax.servlet.*;
-import java.servlet.http.*;
+import javax.servlet.http.*;
 
 //Import the required libraries for the class
 
