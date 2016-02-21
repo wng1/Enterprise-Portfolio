@@ -6,10 +6,10 @@ import javax.servlet.http.*;
 
 //Import the required libraries for the class
 
-public class dbAccess extends HttpServlet
+public class dbAccess extends HttpServlet   
 {
-public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-
+public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException   
+//public method can be changed to protected
 static final String JDBC = "com.mysql.jdbc.driver";
 static final String dbURL = "jdbc:mysql://localhost/dbAccessTest";
 //Provide unchanged instance variables and path to the databaase access
