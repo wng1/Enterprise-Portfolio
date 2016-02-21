@@ -27,9 +27,7 @@ Class.forName("com.mysql.jdbc.driver");  //Accesing a database in a java app req
 Connection con = DriverManager.getConnection(dbURL, Username, Password); // It can be written like this OR
 Connection con = DriverManager.getConnection("jdbc:oracle:orc:@localhost:1521:orcl", "", ""); // like this via Oracle SQL Listerner
 
-#############
-Important section for accessing database  (Must set up test environment and populate data
-
+//Important section for accessing database  (Must set up test environment and populate data
 String sql = "SELECT UserID From UserEntity WHERE" + "Username = $Username AND Password = $Password";
 PreparedStatement preStmt = con.prepareStatement(sql);
 preStmt.setString(1, UserID);
@@ -45,7 +43,9 @@ System.out.println("UserID" + UserID);
 System.out.println("firstName" + firstName);
 System.out.println("lastName" + lastName);
 }
-#############
+result.close();
+stmt.close();
+con.close();   //Once completed, clean-up the environment 
 }
 catch(SQLException sqlerror) 
 {
