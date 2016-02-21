@@ -29,6 +29,22 @@ Connection con = DriverManager.getConnection("jdbc:oracle:orc:@localhost:1521:or
 
 #############
 Important section for accessing database  (Must set up test environment and populate data
+
+String sql = "SELECT UserID From UserEntity WHERE" + "Username = $Username AND Password = $Password";
+PreparedStatement preStmt = con.prepareStatement(sql);
+preStmt.setString(1, UserID);
+ResultSet result = preStmt.executeQuery():
+
+while(result.next())  //Extract data from the entity tables in the database
+{
+int UserID = resukt.getUserID("UserID");
+String firstName = result.getString("firstName");
+String lastName= result.getString("lastName");
+
+System.out.println("UserID" + UserID);
+System.out.println("firstName" + firstName);
+System.out.println("lastName" + lastName);
+}
 #############
 }
 catch(SQLException sqlerror) 
