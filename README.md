@@ -1,8 +1,8 @@
 # Enterprise-Portfolio
 
-This portfolio contains samples using Java, .NET, XML, Spring Framework and Security.
+This portfolio contains samples using Java API (JSP), .NET, XML, Spring Framework and Security.
 
-Sample portfolio (CPD)
+Sample portfolio (CPD) 
 
 
 
