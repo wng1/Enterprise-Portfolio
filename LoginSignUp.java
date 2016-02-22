@@ -11,4 +11,7 @@ protected processLoginReg(HttpServletRequest request, HttpServlet response)
   response.setHeader("content-type", "application/json;charset=utf-8");
   //response.setContentType("text/html");
   //response.setHeader("context-type", "text/html");
+  //File extension and browser, OS will detect
+  
+  PrintWriter out = response.getWriter();
 }
