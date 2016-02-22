@@ -19,6 +19,18 @@ protected processLoginReg(HttpServletRequest request, HttpServlet response)
   String username = request.getParameter("username");
   String password = request.getParameter("password");
   
+  try 
+  {
+  
+  }
+  catch(InvalidRequestException e)
+  {
+      
+  }
+   finally 
+   {
+            out.close();
+   }
   //In other file it retrives the parameters 
   //<form name="loginReg" action="login" method="post">
   //<input type="text" name="username">
