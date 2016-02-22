@@ -14,11 +14,14 @@ protected processLoginReg(HttpServletRequest request, HttpServlet response)
   //File extension and browser, OS will detect
   PrintWriter out = response.getWriter();
   
-  String username = request.getParameter("username");
-  String password = request.getParameter("password");
+  final String username = request.getParameter("username");
+  final String password = request.getParameter("password");
   
   try 
   {
+  //Validate the user either in Realm or Principal
+  //Realm realm = context.getRealm();   
+  Principal principal = this.context.getRealm().authenticate(username, password)
   
   }
   catch(Exception e)
