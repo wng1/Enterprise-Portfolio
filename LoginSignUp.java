@@ -12,9 +12,7 @@ protected processLoginReg(HttpServletRequest request, HttpServlet response)
   //response.setContentType("text/html");
   //response.setHeader("context-type", "text/html");
   //File extension and browser, OS will detect
-  
   PrintWriter out = response.getWriter();
-  Result loginRegResponse = createLoginReg(request);
   
   String username = request.getParameter("username");
   String password = request.getParameter("password");
