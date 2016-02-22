@@ -23,11 +23,11 @@ protected processLoginReg(HttpServletRequest request, HttpServlet response)
   {
   
   }
-  catch(InvalidRequestException e)
+  catch(Exception e)
   {
-      
+      System.out.println("test");
   }
-   finally 
+  finally 
    {
             out.close();
    }
