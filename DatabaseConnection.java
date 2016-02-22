@@ -6,7 +6,7 @@ import javax.servlet.http.*;
 
 //Import the required libraries for the class
 
-public class dbAccess extends HttpServlet   
+public class DatabaseConnection extends HttpServlet   
 {
 public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException   
 //public method can be changed to protected
