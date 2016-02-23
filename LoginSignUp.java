@@ -27,11 +27,14 @@ protected processLoginReg(HttpServletRequest request, HttpServlet response)
   if (debug)
   this.log.debug("Authenticating... " + username);
   Principal principal = this.context.getRealm().authenticate(username, password)
-  
-  //Next step is to process
+    //Next step is to process
   this.processAuthorisedUser(request, response, config, principal, username, password, false);
-  
+  //Check if user has already been authenticated
+  if (principal == null) { 
+    this.log.debug("Already authenticated " + principal.getName()); 
+   return false; 
   }
+  
   catch(Exception e)
   {
       System.out.println("test");
