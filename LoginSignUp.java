@@ -39,9 +39,21 @@ protected processLoginReg(HttpServletRequest request, HttpServlet response)
     //Next step is to process
   this.processAuthorisedUser(request, response, config, principal, username, password, false);
   //Check if user has already been authenticated
-  if (principal == null) { 
+  if (principal != null) { 
     this.log.debug("Already authenticated " + principal.getName()); 
-   return false; 
+   return true; 
+   ///NEXT
+  //s1 Save session
+  final Session oldSession = request.getSessionInternal(false); 
+  //This set to false to prevent the servlet from creating a new session.  The getSession or getSessionInternal() method
+  //should be called before anything is written in the response stream.
+  
+  //Else setCookie string is placed in the HTTP response body rather than the HTTP header.
+  
+  if(oldSession !=null)
+  {
+    
+  }
   }
   
   catch(Exception e)
