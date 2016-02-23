@@ -43,6 +43,17 @@ protected processLoginReg(HttpServletRequest request, HttpServlet response)
    {
             out.close();
    }
+   
+   protected void processAuthorisedUser(HttpServletRequest request, HttpServletResponse response, Principal principal, String username, String password) throws IOException
+   {
+   if (principal == null)
+   {
+    forwardToErrorPage(request, response, config);
+    return (false);
+   }
+   
+   }
+   }
   //In other file it retrives the parameters 
   //<form name="loginReg" action="login" method="post">
   //<input type="text" name="username">
