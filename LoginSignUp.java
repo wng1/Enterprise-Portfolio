@@ -1,3 +1,12 @@
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+
 public class LoginSignup extend HttpServlet 
 {
 
@@ -56,7 +65,8 @@ protected processLoginReg(HttpServletRequest request, HttpServlet response)
     forwardToErrorPage(request, response, config);
     return false;
    }
-   
+   if (debug) 
+   this.log.debug("Authentication Success! " + principal.getName()); 
    }
    }
   //In other file it retrives the parameters 
