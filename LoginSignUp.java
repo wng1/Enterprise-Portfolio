@@ -37,14 +37,15 @@ protected processLoginReg(HttpServletRequest request, HttpServlet response)
   
   catch(Exception e)
   {
-      System.out.println("test");
+   System.out.println("test");
   }
   finally 
    {
-            out.close();
+   out.close();
    }
    
-   protected void processAuthorisedUser(HttpServletRequest request, HttpServletResponse response, Principal principal, String username, String password) throws IOException
+   protected void processAuthorisedUser(HttpServletRequest request, HttpServletResponse response, Principal principal, 
+                                        String username, String password) throws IOException
    {
    if (principal == null)
    {
