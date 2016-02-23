@@ -14,6 +14,9 @@ protected processLoginReg(HttpServletRequest request, HttpServlet response)
   //File extension and browser, OS will detect
   PrintWriter out = response.getWriter();
   
+  final boolean debug = this.log.isDebugEnabled();
+  
+  //Retrieve the credential values from the form
   final String username = request.getParameter("username");
   final String password = request.getParameter("password");
   
@@ -21,7 +24,12 @@ protected processLoginReg(HttpServletRequest request, HttpServlet response)
   {
   //Validate the user either in Realm or Principal
   //Realm realm = context.getRealm();   
+  if (debug)
+  this.log.debug("Authenticating... " + username);
   Principal principal = this.context.getRealm().authenticate(username, password)
+  
+  //Next step is to process
+  this.processAuthorisedUser(request, response, config, principal, username, password, false);
   
   }
   catch(Exception e)
