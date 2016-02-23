@@ -47,10 +47,14 @@ protected processLoginReg(HttpServletRequest request, HttpServlet response)
    protected void processAuthorisedUser(HttpServletRequest request, HttpServletResponse response, Principal principal, 
                                         String username, String password) throws IOException
    {
+   final boolean debug = this.log.isDebugEnabled(); 
+   
    if (principal == null)
    {
+    if (debug) 
+    this.log.debug("Authorised authentication failed"); 
     forwardToErrorPage(request, response, config);
-    return (false);
+    return false;
    }
    
    }
