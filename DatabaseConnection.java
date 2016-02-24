@@ -64,3 +64,11 @@ connection.close();
 }
 
 }
+
+//Some basic steps fo follow when connecting JDBC
+
+Load the driver
+Define the URL connection you want to connect to
+establish that connection and ensure its connected
+create a statement object you want or wish to process
+execute a query. process that result then close the connection 
