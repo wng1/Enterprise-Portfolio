@@ -35,12 +35,25 @@ public class NameController
       return("Checked-name");
   }
   
-  private boolean isEmpty(String fullname) {
+  private boolean isEmpty(String fullname) 
+  {
     return(fullname.trim().isEmpty());
   }
-    
+
+  public String[] getSubscriptionPlans()
+  {
+    return(SubscriptionPlans.spArray());
+  }
 }
 
+//SubscriptionPlans.java
+
+public class SubscriptionPlans
+{
+  private static String[] sp =   {"Basic", "Advanced", "Premium"};
+  
+  
+}
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
