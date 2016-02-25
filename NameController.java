@@ -47,7 +47,7 @@ public class NameController
   
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:h="http://xmlns.jcp.org/jsf/html
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
       
 <h:head>
 <title>Create New User</title>
