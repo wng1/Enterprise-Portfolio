@@ -44,6 +44,26 @@ userInfo.put("password", password);
 Connection conn = DriverManager.getConnection(url, userInfo);
 return (conn);
 }
- 
+
+protected void printTableHeading(Connection conn, ResultSet rs, PrintWriter out) throws SQLException
+{
+      out.println("<TABLE BORDER='1'");
+      String [] heading = { "UserID", "First Name", "Last Name", "Position", "Salary" };
+      out.print("<TR>");
+      for(String headers : heading) 
+      {
+            out.printf("<TH>%s, heading);
+      }
+      out.println();
+}
+
+protected void printTableBody(ResultSet rs, PrintWriter out) throws SQLException
+{
+while(rs.next())
+{
+      out.println("<TR ALIGN='LEFT'>");
+      out.print
+}
+}
 
 }
