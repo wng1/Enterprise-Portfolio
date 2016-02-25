@@ -48,11 +48,11 @@ return (conn);
 protected void printTableHeading(Connection conn, ResultSet rs, PrintWriter out) throws SQLException
 {
       out.println("<TABLE BORDER='1'");
-      String [] heading = { "UserID", "First Name", "Last Name", "Position", "Salary" };
+      String [] heading = { "UserID", "First Name", "Last Name" };
       out.print("<TR>");
       for(String headers : heading) 
       {
-            out.printf("<TH>%s, heading);
+            out.printf("<TH>%s", heading);
       }
       out.println();
 }
@@ -62,8 +62,11 @@ protected void printTableBody(ResultSet rs, PrintWriter out) throws SQLException
 while(rs.next())
 {
       out.println("<TR ALIGN='LEFT'>");
-      out.print
+      out.printf(" <TD>%d", rs.getInt("ID"));
+      out.printf(" <TD>%d", rs.getInt("Firstname"));
+      out.printf(" <TD>%d", rs.getInt("Lastname""));
 }
+      out.println("</TABLE>");
 }
 
 }
