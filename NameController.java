@@ -26,6 +26,17 @@ public class NameController
   {
     this.lastName = lastName;
   }
+    public String showName() 
+  {
+    if (isEmpty(firstname) || isEmpty(lastname)) 
+    {
+      return("Empty-name");
+    } else {
+      return("Checked-name");
+  }
   
-  
+  private boolean isEmpty(String fullname) {
+    return(fullname.trim().isEmpty());
+  }
+    
 }
