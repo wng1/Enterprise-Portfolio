@@ -50,8 +50,14 @@ public class NameController
 
 public class SubscriptionPlans
 {
-  private static String[] sp =   {"Basic", "Advanced", "Premium"};
+  private static String[] sps =   {"Basic", "Advanced", "Premium"};
+  //
   
+  
+  public static String[] spArray()
+  {
+    return(spArrya);
+  }
   
 }
 
