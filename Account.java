@@ -22,4 +22,19 @@ public void setUserID(String UserID)
  }
 }
 
+public String getPassword()
+{
+  return(password);
+}
+
+public void setPassword(String password)
+{
+  this.password = password;
+}
+
+public User getUser()
+{
+  return(user);
+}
+
 }
