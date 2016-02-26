@@ -56,7 +56,7 @@ public class SubscriptionPlans
   
   public static String[] spArray()
   {
-    return(spArrya);
+    return(spArray);
   }
   
 }
