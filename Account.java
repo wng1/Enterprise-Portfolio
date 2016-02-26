@@ -7,9 +7,19 @@ public class AccountBean
 protected String UserID, Username, Password;
 protected Users user;
 
-public String gerUserID()
+public String getUserID()
 {
+  return(UserID);
+}
 
+public void setUserID(String UserID)
+{
+ this.UserID = UserID.trim();
+ 
+ if(this.UserID.isEmpty())
+ {
+   this.UserID = "(UserID not entered)";
+ }
 }
 
 }
