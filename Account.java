@@ -37,4 +37,12 @@ public User getUser()
   return(user);
 }
 
+public String showAccountInformation()
+{
+  if(!password.equals("test"))
+  {
+    return("incorrect-pass");   //Next version, improved security and crytography
+  }
+}
+
 }
