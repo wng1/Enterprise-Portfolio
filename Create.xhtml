@@ -1,1 +1,32 @@
 Document file to utilise java beans and error messages. 
+
+
+<h:head><title>Create new user</title></h:head>
+
+<h:body>
+<fieldset>
+<legend>Example Using the MyFaces Commons Validators</legend>
+<h:form>
+<h:panelGrid columns="3" styleClass="formTable">
+  
+<b>Name:</b>
+<h: inputText value="#{Users.firstname}"
+    required="true"
+    requiredMessage="Please fill in the firstname"
+    id="firstname"/>
+<h: message for="name"/>
+
+<b>Email Address:</b>
+  <h:inputText value="#{Users.emailAddress}" 
+               required="true"
+               requiredMessage="Email address required for security purposes"
+               validatorMessage="Invalid email address"
+               id="emailAddress">
+    <mcv:validateEmail/> 
+  </h:inputText>
+  <h:message for="email"/>
+  
+</fieldset>
+</h:body>
+
+
