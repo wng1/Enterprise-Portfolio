@@ -44,6 +44,15 @@ public class NameController
   {
     return(SubscriptionPlans.spArray());
   }
+  protected void storeConfirmation() 
+   {
+    //Connection data
+  }
+  public String sendConfirmation() 
+  {
+    storeConfirmation(); //call on super.
+    return("confirmation");
+  }
 }
 
 //SubscriptionPlans.java
@@ -83,7 +92,7 @@ public class SubscriptionPlans
 <fieldset>
 <legend>Enter your personal details:</legend>
 <h:form>
-  First Name: <h:inputText value="#{Users.firstname}"/><br/>
+  First Name: <h:inputText value="#{Users.firstname}"/><br/>   //Create.xhtml (additional)
   Last Name: <h:inputText value="#{Users.favoriteLanguage}"/><br/>
   Age: <h:selectOneMenu value="#{Users.age}">
        <f:selectItems value="#{Users.listOfAges}"/>
