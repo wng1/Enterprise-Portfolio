@@ -24,3 +24,14 @@ public class Registration extend HttpServlet
    </HTML>
   }
 }
+
+public class RegistrationServlet extend HttpServlet
+{
+  //Usual validations on request.getParameter("")
+  
+  Cookie c1 = new LongLivedCookie("firstName", firstName);
+  response.addCookie(c1);
+  
+  
+}
+}
