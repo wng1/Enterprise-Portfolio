@@ -10,8 +10,21 @@ public class Registration extend HttpServlet
     response.setContentType("text.html");
     PrintWriter output = response.getWriter(); //utilises the java.io
     
-    String actionURL="/servlet/RegistrationServlet";
+    String actionURL= "/servlet/RegistrationServlet";
     String firstName = CookieUtilites.getCookieValue(request, "firstName", "");
+   
+    //
+    String counter = CookieUtilies.getCookieValue(request, "accessCount", "1");
+    
+    int StartCounter = 1;
+    try 
+    {
+      StartCounter = Integer.parseInt(countString);
+    } catch (NumberFormatException e)
+    {
+      LongLivedCookie cs = new LongLivedCookie("accessCount", String.valueOf(StartCounter+1));
+    }
+    response.addCookie(cs);
     
     //Repeat for the other relevant fields
      //Basic outline
