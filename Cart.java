@@ -14,16 +14,19 @@ return(listOfProducts);
 
 public synchronized void addProduct(String pID)
 {
-  Product order;
+  OrderDetails order;
   for(int i =0; i<listOfProduct.size(); i++)
   {
-    order = (Product)listOfProducts.get(i);
+    order = (OrderDetails)listOfProducts.get(i);
     
     if (order.getPID().equals(pID))
     {
       orderDetails.countUpNoOfProducts();
+      return;
     } 
   }
+    OrderDetails newOrder = new OrderDetails (Product.getProduct(pID));
+    OrderDetails.add(newOrder);
 }
 
 }
