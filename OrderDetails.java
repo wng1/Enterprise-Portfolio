@@ -60,5 +60,14 @@ protected void setProduct(Product product)
   this.product = product;   //not to be changed.
 }
 
+public void cancelProductOrder()
+{
+  setNumOfItems(0);
+}
+
+public double getProductTotalCost()
+{
+  return(getNumOfProducts * getProductCost());
+}
 
 }
