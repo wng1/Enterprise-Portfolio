@@ -9,4 +9,9 @@ setProduct(product);
 setNumOfProducts(1); //This will be on default
 }
 
+public Product getProduct() //Create Product class
+{
+  
+}
+
 }
