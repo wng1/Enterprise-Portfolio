@@ -69,5 +69,5 @@ public double getProductTotalCost()
 {
   return(getNumOfProducts * getProductCost());
 }
-
+//VAT can be optionally included (depending on the database design)
 }
