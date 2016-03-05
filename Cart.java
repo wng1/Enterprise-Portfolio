@@ -17,7 +17,12 @@ public synchronized void addProduct(String pID)
   Product order;
   for(int i =0; i<listOfProduct.size(); i++)
   {
+    order = (Product)listOfProducts.get(i);
     
+    if (order.getPID().equals(pID))
+    {
+      orderDetails.countUpNoOfProducts();
+    } 
   }
 }
 
