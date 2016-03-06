@@ -1,4 +1,6 @@
-<jsp:use ..>
+
+<jsp:useBean id="orders" class="com.enterprise.OrderBean">  //Future change, OrderBean
+<p>Product Name:<jsp: getProperty name="Product" property="productName"/></p> 
 
 
 <p>
