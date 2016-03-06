@@ -2,7 +2,7 @@
 
 This portfolio contains samples using Java API , Java EE, .NET, XML, Spring Framework and Security.
 
-JSP, JSF
+JSP, JSF, Enterprise Java Beans
 
 Sample portfolio (CPD) 
 
