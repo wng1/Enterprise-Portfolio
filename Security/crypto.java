@@ -1,4 +1,5 @@
 import java.security.SecureRandom;
+import sun.misc.BASE64Encoder;
 
 public class cryto
 {
