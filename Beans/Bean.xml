@@ -1,0 +1,9 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    <bean id="Account" class="com.wng.account">
+      <property name="test1" value="Testing 1"/>
+      <property name="test2" value="Testing 2"/>
+   </bean>
