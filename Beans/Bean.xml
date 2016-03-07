@@ -4,6 +4,6 @@
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
     
     <bean id="Account" class="com.wng.account">
-      <property name="test1" value="Testing 1"/>
-      <property name="test2" value="Testing 2"/>
+      <property name="test1" value="210"/>
+      <property name="test2" value="Sherlock"/>
    </bean>
